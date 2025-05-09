@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy app files
 COPY server.js .
 
-# Install express
-RUN npm install express
+# Install curl and express
+RUN apk add --no-cache curl && npm install express
 
 # Expose port
 EXPOSE 8080
